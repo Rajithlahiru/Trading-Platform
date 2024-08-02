@@ -5,8 +5,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    @GetMapping("/hello")
+    @GetMapping
     public String home() {
         return "Welcome to the trading application!";
+    }
+    @GetMapping("/api")
+    public String secured() {
+        return "Welcome to the secured trading application!";
     }
 }
